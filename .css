@@ -3,23 +3,23 @@
     transition-duration: 0.5s;
 }
 
-body{
+body {
     margin-left: 10%;
     margin-right: 10%;
 }
 
-div{
+div {
     border: 10px solid gray;
     border-radius: 10px;
 }
 
-div h2{
+div h2 {
     margin: 0;
     padding-bottom: 10px;
     background-color: gray;
 }
 
-div ul{
+div ul {
     margin: 0;
     padding: 10px;
     border-radius: 6px;
@@ -28,7 +28,7 @@ div ul{
     list-style-type: none;
 }
 
-span.note{
+span.note {
     color: gray;
     font-size: small;
 }
