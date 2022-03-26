@@ -62,7 +62,7 @@ span.note {
 
 div.popup {
     display: none;
-    margin: 10%;
+    margin: 5vh 15vw 15vh 15vw;
     border: 10px solid black;
     border-top-width: 50px;
     border-radius: 15px;

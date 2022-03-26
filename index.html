@@ -15,7 +15,7 @@
         <div class="block" style="flex-grow: 3;">
             <h2>关于我们</h2>
             <div>
-                猪猴工作室是2个爱好游戏的初中生组成的<br />（@<a class="at" href="https://space.bilibili.com/1678298800" id="atGodmor_">Godmor_</a>，@<a class="at" href="https://space.bilibili.com/701675571" id="attjw123hh">tjw123hh</a>）
+                猪猴工作室是2个爱好游戏的初中生组成的<br />（@<a class="at" href="https://space.bilibili.com/1678298800" before="Godmor_" after="Godmor_的B站主页">Godmor_</a>，@<a class="at" href="https://tjw123hh.github.io" before="tjw123hh" after="tjw123hh的个人主页">tjw123hh</a>）
             </div>
         </div>
         <div class="block" style="flex-grow: 3;">
@@ -49,8 +49,17 @@
         };
         var hover
         $("a.at").hover(
-            function(){$("a.at:hover").text($("a.at:hover").attr("id").slice(2)+"的B站主页");hover=$("a.at:hover").attr("id");},
-            () => $("a.at#"+hover).text($("a.at#"+hover).attr("id").slice(2))
+            function(){
+                let jqv = $("a.at:hover")
+                jqv.text(jqv.attr("after"));
+            },
+            function(){
+                let ats = document.getElementsByClassName("at");
+                for (let index = 0; index < ats.length; index++) {
+                    let jqv = $(ats[index]);
+                    jqv.text(jqv.attr("before"));
+                };
+            }
         );
     </script>
 </body>
