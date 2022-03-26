@@ -3,6 +3,10 @@
     transition-duration: 0.5s;
 }
 
+div.block div {
+    height: calc(100% - 1em - 38px);
+}
+
 body {
     margin-left: 10%;
     margin-right: 10%;
@@ -21,16 +25,21 @@ ul {
     padding: 0;
 }
 
+div.main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 div.block {
-    display: inline-block;
     border: 10px solid black;
     border-radius: 10px;
-    margin: 10px;
-    width: 40%;
-    height: 80vh;
+    margin: 10px 0px;
 }
 
 div.block h2 {
+    text-align: left;
     margin: 0;
     padding-bottom: 10px;
     background-color: black;
@@ -43,7 +52,6 @@ div.block div {
     padding: 10px;
     border-radius: 6px;
     outline: 3px solid black;
-    height: calc(80vh - 1em - 36px);
 }
 
 span.note {
@@ -56,7 +64,7 @@ div.popup {
     margin: 100px;
     border: 10px solid black;
     border-top-width: 50px;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: white;
     position: fixed;
     top: 0;
