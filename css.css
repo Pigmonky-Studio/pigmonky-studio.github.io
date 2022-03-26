@@ -35,7 +35,7 @@ div.main {
 div.block {
     border: 10px solid black;
     border-radius: 10px;
-    margin: 10px 0px;
+    margin: 10px;
 }
 
 div.block h2 {
