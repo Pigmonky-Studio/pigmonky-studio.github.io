@@ -4,21 +4,47 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PigMONKY Studio</title>
+    <title>猪猴工作室</title>
     <link rel="shortcut icon" type="image/png" href="logo.png" />
     <link rel="stylesheet" type="text/css" href="css.css" />
 </head>
 
 <body>
-    <h1>欢迎来到PigMONKY工作室的官方界面！</h1>
-    <div>
-        <h2>我们的项目</h2>
-        <ul>
-            <li>pigmonky-studio.github.io<span class="note">（就是这个网站）</span></li>
-            <li>Hymetry</li>
-            <li>infSPACE</li>
-        </ul>
+    <h1>欢迎来到猪猴工作室的官方界面！</h1>
+    <div class="block">
+        <h2>关于我们</h2>
+        <div>
+            猪猴工作室是2个爱好游戏的初中生组成的（@<a class="at" href="https://space.bilibili.com/1678298800" id="atGodmor_">Godmor_</a>，@<a class="at" href="https://space.bilibili.com/701675571" id="attjw123hh">tjw123hh</a>）
+        </div>
     </div>
+    <div class="block">
+        <h2>我们的项目</h2>
+        <div>
+            <ul>
+                <li><a href="javascript:;" onclick="jump('pigmonky-studio.github.io')">pigmonky-studio.github.io<span class="note">（应该快好了）</span></a></li>
+                <li><a href="javascript:;" onclick="jump('Hymetry')">Hymetry<span class="note">（1/10）</span></a></li>
+                <li><a href="javascript:;" onclick="jump('infSPACE')">infSPACE<span class="note">（推倒重做，暂时还没有进展）</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        function jump(text) {
+            $("body").append('<div class="popup"><p></p><button class="x" onclick="x()">x</button></div>');
+            $("div.popup p").load("projects/"+text+".html");
+            $("div.popup").show(500, "swing");
+        };
+        function x() {
+            $("div.popup").hide(500, "swing");
+            setTimeout(() => $("div.popup").remove(), 500);
+        };
+        var hover
+        $("a.at").hover(
+            function(){$("a.at:hover").text($("a.at:hover").attr("id").slice(2)+"的B站主页");hover=$("a.at:hover").attr("id");},
+            () => $("a.at#"+hover).text($("a.at#"+hover).attr("id").slice(2))
+        );
+    </script>
 </body>
 
 </html>
